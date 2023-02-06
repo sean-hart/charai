@@ -56,7 +56,7 @@ def compare_strings(string1, string2):
     indexes = []
     all_combinations = product(*index.values())
     for combination in all_combinations:
-        print(combination)
+        # Don't use the same index twice
         if len(set(combination)) < len(combination):
             continue
         distance = calculate_distance(list(combination))
